@@ -17,7 +17,7 @@ else if (pressed !== $('.equals').text()) {
   $('.answer').text(pressed)
   arr.push(pressed);
   console.log(arr)
-} 
+}
 
 else {
   console.log('equal was pressed')
@@ -46,7 +46,7 @@ function equal (arr) {
       $('.answer').text( minusNumbers(firstNum , secondNum))
       arr = []
     }
-    else if(arr.includes("-")){
+    else if(arr.includes("x")){
        arr.splice(1,1);
       console.log(arr)
       let first = arr.shift();
@@ -56,7 +56,7 @@ function equal (arr) {
       $('.answer').text( multiplyNumbers(firstNum , secondNum))
       arr = []
     }
-    else if(arr.includes("-")){
+    else if(arr.includes("÷")){
        arr.splice(1,1);
       console.log(arr)
       let first = arr.shift();
