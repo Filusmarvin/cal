@@ -1,0 +1,18 @@
+How to get the functions to add. 
+
+function displayTotal () {
+  // add the numbers in cartContents
+  let total = 0;
+  for (let i = 0; i < cartContents.length; i++) {
+    let shirtData = cartContents[i];
+    let price = shirtData[1];
+    total = total + price;
+  }
+  let totalDisplayPlace = document.querySelector('.cart .total');
+  totalDisplayPlace.textContent = "Total: $" + total;
+}
+let carts = document.querySelectorAll('.cart-li');
+for (let i = 0; i < carts.length; i++) {
+  let cart = carts[i];
+  cart.addEventListener('click', addToCartContents);
+}
